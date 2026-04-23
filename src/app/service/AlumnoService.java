@@ -4,14 +4,17 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
 public class AlumnoService {
-		private ObservableList<Alumno>listaAlumnos= FXCollections.observableArrayList();
+		private static ObservableList<Alumno>listaAlumnos= FXCollections.observableArrayList();
 	public void agregar(String nombre, String edadTexto) {
 		
 		if(nombre.isEmpty()) {
 			throw new IllegalArgumentException("Nombre no puede estar vacio");
 		}
+		if(nombre.matches(".*\\d.*")){
+			throw new IllegalArgumentException("Nombre no puede contener numeros");
+		}
 		if (edadTexto.isEmpty()) {
-			throw new IllegalArgumentException("edad no puede estar vacio");
+			throw new IllegalArgumentException("Edad no puede estar vacio");
 		}
 		int edad;
 		try {
@@ -20,7 +23,7 @@ public class AlumnoService {
 			throw new IllegalArgumentException("Edad debe ser un numero entero");
 		}
 		if(edad<=0) {
-			throw new IllegalArgumentException("Edad no puede ser menos de 0");
+			throw new IllegalArgumentException("Edad no puede ser 0");
 		}
 		Alumno alumno =new Alumno(nombre,edad);
 		listaAlumnos.add(alumno);

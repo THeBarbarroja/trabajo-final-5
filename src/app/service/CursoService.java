@@ -4,10 +4,10 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
 public class CursoService {
-	private ObservableList<Curso>listaCurso= FXCollections.observableArrayList();
+	private static ObservableList<Curso>listaCurso= FXCollections.observableArrayList();
 	public void agregar(String nombre, String horasTexto) {
 		if(nombre.isEmpty()) {
-			throw new IllegalArgumentException("Nombre no puede estar vacio");
+			throw new IllegalArgumentException("Curso no puede estar vacio");
 		}
 		if (horasTexto.isEmpty()) {
 			throw new IllegalArgumentException("horas no puede estar vacio");

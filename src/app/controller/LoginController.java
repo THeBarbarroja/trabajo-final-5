@@ -16,7 +16,7 @@ public class LoginController {
             Navigation.cambiar("/app/view/menu.fxml");
 
         } else {
-            lblError.setText("Datos incorrectos");
+            lblError.setText("Datos incorrectos.Ingrese usuario o contraseña nuevamente");
         }
     }
 }
