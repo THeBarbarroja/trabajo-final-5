@@ -5,7 +5,7 @@
 
 <VBox spacing="10" alignment="CENTER"
       xmlns:fx="http://javafx.com/fxml"
-      fx:controller="app.controller.LoginController>"
+      fx:controller="app.controller.LoginController">
 
     <Label text="LOGIN"/>
     

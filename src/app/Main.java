@@ -14,9 +14,11 @@ public class Main extends Application {
 	    	Navigation.setStage(stage);
 	    	FXMLLoader loader = new FXMLLoader(getClass().getResource("/app/view/login.fxml"));
 	    	Parent root = loader.load();
-	    	Scene scene =new Scene(root,600,400);
+	    	Scene scene =new Scene(root,300,400);
 	    	stage.setScene(scene);
-	        stage.setTitle("");
+	    	scene.getStylesheets().add(
+	    			Navigation.class.getResource("/app/view/style.css").toExternalForm());
+	        stage.setTitle("Gestion de Alumnos y Cursos");
 	        stage.show();
 	      }
 	    

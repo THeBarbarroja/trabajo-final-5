@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox spacing="10" alignment="CENTER"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="app.controller.CursoController">
+      <Label text="Gestor de Cursos"/>
+      		<TextField fx:id="txtCurso" promptText="Curso"/>
+      		<TextField fx:id="txtHoras" promptText="Horas"/>
+      		<Label fx:id="lblError"/>
+      		<Button text="Agregar" onAction="#agregar"/>
+      		<Button text="Eliminar" onAction="#eliminar"/>
+      		<TableView fx:id="tablaCursos"/>
+       		<Button text="volver" onAction="#volver"/>
+      
+</VBox>

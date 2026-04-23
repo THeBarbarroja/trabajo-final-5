@@ -10,9 +10,9 @@ public class CursoService {
 			throw new IllegalArgumentException("Nombre no puede estar vacio");
 		}
 		if (horasTexto.isEmpty()) {
-			throw new IllegalArgumentException("Edad no puede estar vacio");
+			throw new IllegalArgumentException("horas no puede estar vacio");
 		}
-		double horas;
+		int horas;
 		try {
 			horas=Integer.parseInt(horasTexto);
 		}catch(NumberFormatException e) {
@@ -29,6 +29,9 @@ public class CursoService {
 		listaCurso.remove(curso);
 	
 	}
-	
+	public ObservableList<Curso>devolverLista(){
+		return listaCurso;
+		
+	}
 }
 

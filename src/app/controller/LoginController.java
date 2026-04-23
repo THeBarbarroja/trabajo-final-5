@@ -13,8 +13,7 @@ public class LoginController {
 	@FXML
 	public void ingresar() {
 		if (txtUsuario.getText().equals("admin")&& txtClave.getText().equals("1234")) {
-		    // 🔥 UNA SOLA LÍNEA
-            Navigation.cambiar("/view/menu.fxml");
+            Navigation.cambiar("/app/view/menu.fxml");
 
         } else {
             lblError.setText("Datos incorrectos");

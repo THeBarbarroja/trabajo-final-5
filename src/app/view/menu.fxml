@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox spacing="10" alignment="CENTER"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="app.controller.MenuController">
+      
+      <Label text="MENÚ PRINCIPAL"/>
+      
+      <Button text="Gestion de Alumnos" onAction="#gestorAlumnos"/>
+      <Button text="Gestion de Cursos" onAction="#gestorCursos"/>
+      <Button text="Cerrar Sesion" onAction="#cerrar"/>
+      
+   </VBox>   

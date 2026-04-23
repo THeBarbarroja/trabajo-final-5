@@ -11,7 +11,7 @@ public class AlumnoService {
 			throw new IllegalArgumentException("Nombre no puede estar vacio");
 		}
 		if (edadTexto.isEmpty()) {
-			throw new IllegalArgumentException("Edad no puede estar vacio");
+			throw new IllegalArgumentException("edad no puede estar vacio");
 		}
 		int edad;
 		try {
@@ -26,8 +26,13 @@ public class AlumnoService {
 		listaAlumnos.add(alumno);
 		
 	}
+	
 	public void eliminar(Alumno alumno) {
 		listaAlumnos.remove(alumno);
+		
+	}
+	public ObservableList<Alumno>devolverLista(){
+		return listaAlumnos;
 		
 	}
 
